@@ -18,11 +18,23 @@ function draw() {
 }
 
 function pencil(x, y, pencilWidth, pencilHeight) {
-    fill(0);
+    background(0);
+    fill(random(200, 255), random(200, 250), random(0, 65));
     noStroke();
     rect(x, y, pencilWidth, pencilHeight);
 
-    triangle(x - pencilWidth / 2, y + pencilHeight / 2, x + pencilWidth / 2, y + pencilHeight / 2, x, y + 300);
+    triangle(x - pencilWidth / 2, y + pencilHeight / 2, x + pencilWidth / 2, y + pencilHeight / 2, x, y + pencilHeight);
+
+    stroke(80);
+    line(x + pencilWidth / 3, y + pencilHeight / 2, x + pencilWidth / 3, y - pencilHeight / 2);
+    line(x - pencilWidth / 3, y + pencilHeight / 2, x - pencilWidth / 3, y - pencilHeight / 2);
+    line(x - pencilWidth / 200, y + pencilHeight / 2, x - pencilWidth / 200, y - pencilHeight / 2);
+
+    noStroke();
+    fill(random(240, 255), random(150, 185), random(200, 215));
+    rect(x, y - pencilHeight / 2, pencilWidth, pencilHeight / 4);
+    fill(random(150, 200));
+    rect(x, y - pencilHeight / 3, pencilWidth, pencilHeight / 7);
 }
 
 
